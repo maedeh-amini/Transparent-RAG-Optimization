@@ -76,16 +76,15 @@ A collection of R and Python scripts for data cleaning, processing, and visualiz
     * `demographics_analysis/`: Computes participant age and gender distributions.
 
 ### 5. `results/` : Computed Outputs
-
-Stores all final generated artifacts, including tables, plots, and statistical summaries produced by the analysis scripts, separated into `automated_evaluation/` and `human_evaluation/`.
+Stores all final statistical summaries and visual artifacts (including tables and plots) produced by the analysis scripts, organized into `automated_evaluation/` and `human_evaluation/`subdirectories.
 
 ## 🚀 Reproducibility & Setup Guide
 
 ### 1. Data Decryption & Environment Preparation
 
-To comply with GDPR and human-subject research protocols, raw demographic and evaluation datasets are AES-encrypted within `01_data/03_user_study_exports/ExperimentData.zip`.
+To comply with GDPR and human-subject research protocols, raw demographic and evaluation datasets are AES-encrypted within `data/user_study_exports/ExperimentData.zip`.
 
-* **Reviewer Access**: Decrypt the archive using the key provided via secure email. Extract the .csv payload directly into its host directory (01_data/03_user_study_exports/) to ensure all relative file paths resolve correctly during downstream script execution.
+* **Reviewer Access**: Decrypt the archive using the key provided via secure email. Extract the .csv payload directly into its host directory to ensure all relative file paths resolve correctly during downstream script execution.
 
 ### 2. Backend Execution
 
@@ -93,7 +92,7 @@ Navigate to the `rag_pipelines/` directory to review or execute the ingestion an
 
 ### 3. Running the Analysis
 
-Navigate to `statistical_analysis/` to review the data cleaning and evaluation logic. Scripts are numbered and should be executed sequentially (starting with demographics, proceeding to RQ1, RQ2, and concluding with RQ3) to successfully generate the figures found in `05_results/`.
+Navigate to `statistical_analysis/` to review the data cleaning and evaluation logic. Scripts should be executed sequentially (RQ1, RQ2, and concluding with RQ3, where demographics are also analyzed) to successfully generate the figures found in `results/`.
 
 ## 📬 Contact
 
