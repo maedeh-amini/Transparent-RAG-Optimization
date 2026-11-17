@@ -23,20 +23,19 @@ The repository is modularized chronologically to reflect the pipeline of the exp
 ├── data
 │   ├── pilot_study_data
 │   ├── rag_corpora
-│   ├── 02_qa_ground_truth
-│   └── 03_user_study_exports
-├── 02_rag_pipelines
-│   ├── 01_semantic_rag_benchmark
-│   ├── 02_semantic_rag_academic_data
-│   ├── 03_graph_rag_benchmark
-│   └── 04_graph_rag_academic_data
-├── 03_streamlit_app
-├── 04_statistical_analysis
-│   ├── demographics_analysis
+│   └── user_study_exports
+├── rag_pipelines
+│   ├── semantic_rag_benchmark_data
+│   ├── semantic_rag_academic_data
+│   ├── graph_rag_benchmark_data
+│   └── graph_rag_academic_data
+├── streamlit_app
+├── statistical_analysis
 │   ├── rq1_automated_evaluations
 │   ├── rq2_human_vs_llm_judge
 │   └── rq3_trust_analysis
-└── 05_results
+│       └── demographics_analysis
+└── results
     ├── automated_evaluation
     └── human_evaluation
 ```
