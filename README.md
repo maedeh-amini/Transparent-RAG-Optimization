@@ -77,4 +77,5 @@ Navigate to `04_statistical_analysis/` to review the data cleaning and evaluatio
 ## 📬 Contact
 
 If you have questions regarding this research, the methodology, or the repository structure, please feel free to open an issue or reach out directly at mamini@uni-osnabrueck.de
+
 Thank you for your interest in this research!
