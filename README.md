@@ -43,15 +43,16 @@ The repository is modularized chronologically to reflect the pipeline of the exp
 
 ### 1. `data` : Core Datasets & Ground Truth
 
-Houses the foundational data used throughout the study.
+Stores the foundational data used throughout the study.
 
-* `00_pilot_study_data/`: Exports and link documentation from initial pilot testing.
+* `pilot_study_data/`: Exports and link documentation from initial pilot testing.
 
-* `01_rag_corpora/`: Contains `academic_corpus_chunks_sample.json`, a structural 10-chunk sample demonstrating the proprietary Osnabrück University dataset schema.
+* `rag_corpora/`: Contains `academic_corpus_chunks_sample.json`, a structural 10-chunk sample demonstrating the proprietary Osnabrück University dataset schema, Human-crafted DeepEval Q&A benchmarks (e.g., `human_crafted_qa_ground_truth.json`).
+  - **`01_rag_corpora/`**: Contains evaluation data split into two subdirectories:
+  - **`01_benchmark_eval_data/`**: Includes the sampled HotpotQA benchmark datasets (`ragbench_hotpotqa_50_sampled.csv` and `ragbench_hotpotqa_50_sampled.jsonl`).
+  - **`02_academic_eval_data/`**: Contains `academic_corpus_chunks_sample.json` (a structural 10-chunk sample demonstrating the proprietary Osnabrück University dataset schema), human-crafted DeepEval Q&A benchmarks (`human_crafted_qa_ground_truth.json`), and a `DATA_RESTRICTION_NOTICE.md` file.
 
-* `02_qa_ground_truth/`: Human-crafted DeepEval Q&A benchmarks (e.g., `human_crafted_qa_ground_truth.json`).
-
-* `03_user_study_exports/`: Contains the encrypted `ExperimentData.zip` securing the raw human-subject study data.
+* `user_study_exports/`: Contains the encrypted `ExperimentData.zip` securing the raw human-subject study data.
 
 ### 2. `rag_pipelines` : Backend Implementations
 
