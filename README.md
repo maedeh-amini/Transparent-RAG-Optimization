@@ -41,7 +41,7 @@ The repository is modularized chronologically to reflect the pipeline of the exp
 ```
 
 
-### `1. data/` : Core Datasets & Ground Truth
+### 1. `data` : Core Datasets & Ground Truth
 
 Houses the foundational data used throughout the study.
 
@@ -53,7 +53,7 @@ Houses the foundational data used throughout the study.
 
 * `03_user_study_exports/`: Contains the encrypted `ExperimentData.zip` securing the raw human-subject study data.
 
-### `02_rag_pipelines/` : Backend Implementations
+### 2. `rag_pipelines` : Backend Implementations
 
 Contains the ingestion, chunking, and retrieval scripts for both tested architectures.
 
@@ -61,11 +61,11 @@ Contains the ingestion, chunking, and retrieval scripts for both tested architec
 
 * `03_graph_rag_benchmark/` & `04_graph_rag_academic_data/`: Graph database architectures utilizing Neo4j, Memgraph, and Cypher query integrations.
 
-### `03_streamlit_app/` : Frontend Evaluation
+### 3. `streamlit_app` : Frontend Evaluation
 
 Contains the codebase for the **UniCompanion** interactive web application used to deploy the models and facilitate the human user study.
 
-### `04_statistical_analysis/` : Analytical Scripts
+### 4. `statistical_analysis` : Analytical Scripts
 
 A collection of R and Python scripts for data cleaning, processing, and visualization.
 
@@ -77,7 +77,7 @@ A collection of R and Python scripts for data cleaning, processing, and visualiz
 
 * `rq3_trust_analysis/`: Executes hypothesis testing for trust and explainability dimensions.
 
-### `05_results/` : Computed Outputs
+### 5. `results` : Computed Outputs
 
 Stores all final generated artifacts, including tables, dumbbell plots, radar charts, and statistical summaries produced by the analysis scripts, separated into `automated_evaluation/` and `human_evaluation/`.
 
