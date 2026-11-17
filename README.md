@@ -18,6 +18,7 @@ To comprehensively evaluate the chatbots, this project employs a hybrid evaluati
 
 The repository is modularized chronologically to reflect the pipeline of the experiment.
 
+```text
 .
 ├── data
 │   ├── pilot_study_data
