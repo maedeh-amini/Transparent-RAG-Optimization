@@ -39,8 +39,7 @@ The repository is modularized chronologically to reflect the pipeline of the exp
 └── 05_results
     ├── automated_evaluation
     └── human_evaluation
-
-
+```
 
 
 ### `01_data/` : Core Datasets & Ground Truth
