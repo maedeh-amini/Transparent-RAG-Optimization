@@ -1,6 +1,6 @@
 # Transparency-Aware Optimization of LLM-Driven Conversational Agents using Semantic and Graph-based RAG
 
-> **Master's Thesis Codebase** | Osnabrück University & University of Bremen (Digital Media Lab / virtUOS)
+> **Master's Thesis Codebase** | Osnabrück University & University of Bremen (virtUOS / Digital Media Lab)
 
 This repository hosts the complete data pipelines, backend architectures, and statistical evaluations for an empirical study on Large Language Model (LLM) conversational agents. The research investigates how underlying retrieval mechanisms—specifically traditional **Semantic Retrieval-Augmented Generation (RAG)** versus **Knowledge Graph-based RAG (GraphRAG)**—impact the explainability and trustworthiness of these systems within a domain-specific academic context.
 
@@ -10,13 +10,37 @@ To comprehensively evaluate the chatbots, this project employs a hybrid evaluati
 
 * **Human-in-the-Loop Evaluation:** A controlled user study conducted via a custom Streamlit web application (*UniCompanion*) to capture subjective ratings on system explainability and user trust.
 
-* **Automated LLM-as-a-Judge:** Leveraging frameworks like DeepEval alongside lexical metrics (BERTScore) to establish baseline RAG performance across standard benchmarks (HotpotQA) and custom academic datasets.
+* **Automated LLM-as-a-Judge:** Leveraging frameworks like DeepEval alongside lexical metrics (BERTScore) to establish baseline RAG performance across standard benchmarks RAGBench (HotpotQA split) and custom academic datasets.
 
-* **Statistical Validation:** Rigorous hypothesis testing, including Repeated Measures ANOVA, Aligned Rank Transform, and Spearman correlations, to evaluate evaluator bias and the interplay between transparency and trust.
+* **Statistical analyses:** Rigorous hypothesis testing, including Repeated Measures ANOVA, Aligned Rank Transform, and Spearman correlations, to assess evaluator bias and the interplay between transparency and trust.
 
 ## 📂 Codebase Architecture
 
 The repository is modularized chronologically to reflect the pipeline of the experiment.
+
+.
+├── data
+│   ├── pilot_study_data
+│   ├── rag_corpora
+│   ├── 02_qa_ground_truth
+│   └── 03_user_study_exports
+├── 02_rag_pipelines
+│   ├── 01_semantic_rag_benchmark
+│   ├── 02_semantic_rag_academic_data
+│   ├── 03_graph_rag_benchmark
+│   └── 04_graph_rag_academic_data
+├── 03_streamlit_app
+├── 04_statistical_analysis
+│   ├── demographics_analysis
+│   ├── rq1_automated_evaluations
+│   ├── rq2_human_vs_llm_judge
+│   └── rq3_trust_analysis
+└── 05_results
+    ├── automated_evaluation
+    └── human_evaluation
+
+
+
 
 ### `01_data/` : Core Datasets & Ground Truth
 
@@ -76,6 +100,6 @@ Navigate to `04_statistical_analysis/` to review the data cleaning and evaluatio
 
 ## 📬 Contact
 
-If you have questions regarding this research, the methodology, or the repository structure, please feel free to open an issue or reach out directly at mamini@uni-osnabrueck.de
+If you have questions regarding this research, the methodology, or the repository structure, please feel free to open an issue or reach out directly at mamini@uni-osnabrueck.de.
 
 Thank you for your interest in this research!
