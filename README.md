@@ -74,10 +74,7 @@ Navigate to the `02_rag_pipelines/` directory to review or execute the ingestion
 
 Navigate to `04_statistical_analysis/` to review the data cleaning and evaluation logic. Scripts are numbered and should be executed sequentially (starting with demographics, proceeding to RQ1, RQ2, and concluding with RQ3) to successfully generate the figures found in `05_results/`.
 
-## 📬 Author & Acknowledgments
+## 📬 Contact
 
-**Author:** Maedeh Amini
-
-**Supervisors:** Dr. Tobias Thelen, Prof. Dr. Rainer Malaka, Laura Spillner, Yesid Cano Castro
-
-If you have questions regarding this research, the methodology, or the repository structure, please feel free to open an issue or reach out directly. Thank you for your interest in this research!
+If you have questions regarding this research, the methodology, or the repository structure, please feel free to open an issue or reach out directly at mamini@uni-osnabrueck.de
+Thank you for your interest in this research!
