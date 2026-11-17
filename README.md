@@ -10,13 +10,13 @@ To comprehensively evaluate the chatbots, this project employs a hybrid evaluati
 
 * **Human-in-the-Loop Evaluation:** A controlled user study conducted via a custom Streamlit web application (*UniCompanion*) to capture subjective ratings on system explainability and user trust.
 
-* **Automated LLM-as-a-Judge:** Leveraging frameworks like DeepEval alongside lexical metrics (BERTScore) to establish baseline RAG performance across standard benchmarks RAGBench (HotpotQA split) and custom academic datasets.
+* **Automated LLM-as-a-Judge:** Leveraged frameworks like DeepEval alongside lexical metrics (BERTScore) to establish baseline RAG performance across the standard benchmark RAGBench (HotpotQA split) and a custom academic dataset.
 
 * **Statistical analyses:** Rigorous hypothesis testing, including Repeated Measures ANOVA, Aligned Rank Transform, and Spearman correlations, to assess evaluator bias and the interplay between transparency and trust.
 
 ## 📂 Codebase Architecture
 
-The repository is modularized chronologically to reflect the pipeline of the experiment. Below is an overview of the main folders
+The repository is modularized chronologically to reflect the pipeline of the experiment. Below is an overview of the main folders.
 
 ```text
 .
@@ -25,10 +25,10 @@ The repository is modularized chronologically to reflect the pipeline of the exp
 │   ├── rag_corpora
 │   └── user_study_exports
 ├── rag_pipelines
-│   ├── semantic_rag_benchmark_data
-│   ├── semantic_rag_academic_data
-│   ├── graph_rag_benchmark_data
-│   └── graph_rag_academic_data
+│   ├── semantic_benchmark_data
+│   ├── semantic_academic_data
+│   ├── graph_benchmark_data
+│   └── graph_academic_data
 ├── streamlit_app
 ├── statistical_analysis
 │   ├── rq1_automated_evaluations
@@ -54,11 +54,11 @@ Stores the foundational data used throughout the study.
 
 ### 2. `rag_pipelines/` : Backend Implementations
 
-Contains the ingestion, chunking, and retrieval scripts for both tested architectures.
+Contains the Python scripts for data ingestion, chunking, retrieval, and evaluation across both tested architectures.
 
-* `semantic_rag_benchmark_data/` & `semantic_rag_academic_data/`: Traditional vector-based RAG pipelines.
+* `semantic_benchmark_data/` & `semantic_academic_data/`: Traditional vector-based RAG pipelines.
 
-* `graph_rag_benchmark_data/` & `graph_rag_academic_data/`: Graph database architectures utilizing Neo4j and Cypher query integrations.
+* `graph_benchmark_data/` & `graph_academic_data/`: Graph database architectures utilizing Neo4j and Cypher query integrations.
 
 ### 3. `streamlit_app/` : Frontend Evaluation
 
@@ -68,11 +68,11 @@ Contains the codebase for the **UniCompanion** interactive web application used 
 
 A collection of R and Python scripts for data cleaning, processing, and visualization.
 
-* `rq1_automated_evaluations/`: Executes automated metric computations.
+* `rq1_automated_evaluations/`: Executes automated metric computations to address the first research question.
 
-* `rq2_human_vs_llm_judge/`: Analyzes evaluator bias alignments between human scores and LLM judges.
+* `rq2_human_vs_llm_judge/`: Analyzes evaluator bias alignments between human scores and LLM judges to address the second research question.
 
-* `rq3_trust_analysis/`: Executes hypothesis testing and covariate analysis for the trust and explainability dimensions.
+* `rq3_trust_analysis/`: Executes hypothesis testing and covariate analysis for the trust and explainability dimensions to address the third research question.
     * `demographics_analysis/`: Computes participant age and gender distributions.
 
 ### 5. `results/` : Computed Outputs
