@@ -16,7 +16,7 @@ To comprehensively evaluate the chatbots, this project employs a hybrid evaluati
 
 ## 📂 Codebase Architecture
 
-The repository is modularized chronologically to reflect the pipeline of the experiment.
+The repository is modularized chronologically to reflect the pipeline of the experiment. Below is an overview of the main folders
 
 ```text
 .
