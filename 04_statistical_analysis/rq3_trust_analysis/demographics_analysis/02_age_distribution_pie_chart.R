@@ -3,7 +3,7 @@
 # Purpose: Generate Categorical Age Group Pie Chart for Demographics
 #
 # This script takes the continuous 'Age' variable from the cleaned demographics 
-# dataset and categorizes it into standard academic brackets (18-24, 25-39, etc.). 
+# dataset and categorizes it into standard academic brackets (18-25, 26-35, etc.). 
 # 
 # It generates a percentage pie chart using polar coordinates,
 # utilizing the `ggrepel` package to ensure the percentage labels dynamically push 
@@ -25,13 +25,12 @@ age_summary <- demo_clean %>%
   mutate(
     # Bucket continuous ages into categorical groups using case_when
     Age_Group = case_when(
-      Age >= 18 & Age <= 24 ~ "18-24",
-      Age >= 25 & Age <= 39 ~ "25-39",
-      Age >= 40 & Age <= 59 ~ "40-59",
-      Age >= 60 ~ "60 plus"
+      Age >= 18 & Age <= 25 ~ "18-25",
+      Age >= 26 & Age <= 35 ~ "26-35",
+      Age >= 36 & Age <= 45 ~ "36-45"
     ),
     # Lock the factor levels to ensure they appear sequentially in the plot legend
-    Age_Group = factor(Age_Group, levels = c("18-24", "25-39", "40-59", "60 plus"))
+    Age_Group = factor(Age_Group, levels = c("18-25", "26-35", "36-45"))
   ) %>%
   count(Age_Group) %>%
   # Calculate proportion relative to the total N
@@ -58,11 +57,11 @@ plot_age <- ggplot(age_summary, aes(x = 1, y = Percentage, fill = Age_Group)) +
                    label.size = 0.5,     # Thickness of the black border
                    show.legend = FALSE) +
   
-  # Apply a custom color palette
-  scale_fill_manual(values = c("18-24" = "#4F62A1", 
-                               "25-39" = "#BE7B79", 
-                               "40-59" = "#18BC9C", 
-                               "60 plus" = "#985A59")) +
+  # Apply a custom color palette matching the requested reference image
+  scale_fill_manual(values = c("18-25" = "#6582B3",   # Soft Blue
+                               "26-35" = "#B17270",   # Earthy Red/Brown
+                               "36-45" = "#56C98F"    # Corrected Green
+  )) +
   labs(
     fill = "") +
   theme_void() + 
@@ -81,3 +80,4 @@ print(plot_age)
 # ==============================================================================
 # Save the high-resolution plot to the designated outputs folder
 ggsave(file.path(output_dir, "Plot_1_Age_Groups_Pie.png"), plot_age, width = 8, height = 6, dpi = 300)
+
