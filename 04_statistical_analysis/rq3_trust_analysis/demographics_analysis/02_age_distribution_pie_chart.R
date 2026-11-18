@@ -57,7 +57,7 @@ plot_age <- ggplot(age_summary, aes(x = 1, y = Percentage, fill = Age_Group)) +
                    label.size = 0.5,     # Thickness of the black border
                    show.legend = FALSE) +
   
-  # Apply a custom color palette matching the requested reference image
+  # Apply a custom color palette 
   scale_fill_manual(values = c("18-25" = "#6582B3",   # Soft Blue
                                "26-35" = "#B17270",   # Earthy Red/Brown
                                "36-45" = "#56C98F"    # Corrected Green
